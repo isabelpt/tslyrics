@@ -82,6 +82,7 @@
                     document.getElementById("albumValue").innerHTML = "special";
                 } else if (albumChoice == "no") {
                     document.getElementById("albumValue").innerHTML = "no";
+                    document.getElementById("lyricLine").innerHTML = "Choose a category";
                 }
             }
             function changeLyric() {
@@ -136,7 +137,7 @@
                     var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
                     document.getElementById("lyricLine").innerHTML = lyric;
                 } else if (album == "no") {
-                    document.getElementById("lyricLine").innerHTML = "Choose a category"
+                    document.getElementById("lyricLine").innerHTML = "Choose a category";
                 }
             }
         </script>
