@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TS Song Lyric Generator</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:wght@300&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body id="mmm">
+        <div id="content">
+            <h1>ts lyric generator</h1>
+            <select id = "album" onchange = "changeAlbum()">
+                <option value="all" selected="selected">favorites</option>
+                <option value="debut">debut</option>
+                <option value="fearless">fearless</option>
+                <option value="speaknow">speak now</option>
+                <option value="red">red</option>
+                <option value="teen">1989</option>
+                <option value="reputation">reputation</option>
+                <option value="lover">lover</option>
+                <option value="folklore">folklore</option>
+                <option value="evermore">evermore</option>
+                <option value="other">other songs</option>
+                <option value="special">special</option>
+            </select>
+            <button id="abc" onclick = "changeLyric()">change lyric</button>
+            <div id="lyricLine">
+                <p></p>
+            </div>
+            <div id="albumValue">
+                <p hidden></p>
+            </div>
+        </div>
+        <script>
+            function changeAlbum() {
+                var albumChoice = document.getElementById("album").value;
+                if (albumChoice == "all") {
+                    console.log(albumChoice);
+                    document.getElementById("albumValue").innerHTML = "all";
+                } else if (albumChoice == "debut") {
+                    console.log(albumChoice);
+                    document.getElementById("albumValue").innerHTML = "debut";
+                    
+                } else if (albumChoice == "fearless") {
+                    console.log(albumChoice);
+                    document.getElementById("albumValue").innerHTML = "fearless";
+                    
+                } else if (albumChoice == "speaknow") {
+                    console.log(albumChoice);
+                    document.getElementById("albumValue").innerHTML = "speaknow";
+                    
+                } else if (albumChoice == "red") {
+                    console.log(albumChoice);
+                    document.getElementById("albumValue").innerHTML = "red";
+                    
+                } else if (albumChoice == "teen") {
+                    console.log(albumChoice);
+                    document.getElementById("albumValue").innerHTML = "teen";
+                    
+                } else if (albumChoice == "reputation") {
+                    console.log(albumChoice);
+                    document.getElementById("albumValue").innerHTML = "reputation";
+                    
+                } else if (albumChoice == "lover") {
+                    console.log(albumChoice);
+                    document.getElementById("albumValue").innerHTML = "lover";
+                    
+                } else if (albumChoice == "folklore") {
+                    console.log(albumChoice);
+                    document.getElementById("albumValue").innerHTML = "folklore";
+                    
+                } else if (albumChoice == "evermore") {
+                    console.log(albumChoice);
+                    document.getElementById("albumValue").innerHTML = "evermore";
+                    
+                } else if (albumChoice == "other"){
+                    document.getElementById("albumValue").innerHTML = "other";
+                } else if (albumChoice == "special") {
+                    document.getElementById("albumValue").innerHTML = "special";
+                }
+            }
+            function changeLyric() {
+                var lyricList = [];
+                var album = document.getElementById("albumValue").innerHTML;
+                if (album == "all") {
+                    lyricList = ["So go and tell your friends that I'm obsessive and crazy That's fine, I'll tell mine you're gay", "I could go back to every laugh, but I don't wanna go there anymore", "Never wanted this, never wanna see you hurt, every little bump in the road I tried to swerve", "I fell in love with a careless man's careful daughter, she is the best thing that's ever been mine", "Wasn't it easier in your lunchbox days? Always a bigger bed to crawl into", "If you have children some day, when they point to the pictures please tell them my name", "And all we are is skin and bone trained to get along", "And you call me up again just to break me like a promise, so casually cruel in the name of being honest; I'm a crumpled up piece of paper lying here, 'cause I remember it all, all, all too well", "Words, how little they mean, when you're a little too late", "The rest of the world was black and white, but we were in screaming color", "When the flowers that we'd grown together died of thirst", "And you understand now why they lost their minds and fought the wars, and why I've spent my whole life trying to put it into words", "I'm in a getaway car, I left you in a motel bar; Put the money in a bag and I stole the keys, that was the last time you ever saw me", "I want your midnights, but I'll be cleaning up bottles with you on New Year's Day", "I'll be there if you're the toast of the town, babe, or if you strike out and you're crawling home", "Please don't ever become a stranger whose laugh I could recognize anywhere", "I cut off my nose just to spite my face, then I hate my reflection for years and years", "You like the nicer nurses, you make the best of a bad deal", "If one thing had been different, would everything be different today?", "I had a marvelous time ruining everything", "I didn't have it in myself to go with grace, cause when I'd fight, you used to tell me I was brave", "I was so ahead of the curve, the curve became a sphere", "You're a flashback in a film reel on the one screen in my town", "And you wanna scream don't call me kid, don't call me baby, look at this godforsaken mess that you made me; you showed me colors you know I can't see with anyone else. Don't call me kid, don't call me baby, look at this idiotic fool that you made me; you taught me a secret language I can't speak with anyone else, and you know damn well for you, I would ruin myself a million little times", "You knew it still hurts underneath my scars from when they pulled me apart, but what you did was just as dark", "I want auroras and sad prose, I want to watch wisteria grow right over my bare feet", "I don't like that falling feels like flying 'til the bone crush", "I made you my temple, my mural, my sky, now I'm begging for footnotes in the story of your life", "Damn, Dorothea, they all wanna be ya, but are you still the same soul I met under the bleachers?", "So yeah, it's a war, it's the goddamn fight of my life and you started it, you started it", "And the skeletons in both our closets plotted hard to fuck this up, and the old men that I've swindled really did believe I was the one, and the ladies lunching have their stories about when you passed through town, but that was all before I locked it down", "Past me, I wanna tell you not to get lost in these petty things. Your nemeses, will defeat themselves before you get the chance to swing", "I should've asked you questions, I should've asked you how to be", "That old familiar body ache, the snaps from the same little breaks in your soul", "And no amount of friends at 25 will fill the empty seats at the lunch tables of your past", "She lost him, but found herself, and somehow that was everything", "Said a prayer of gratitude for each chink in the armor she never knew she needed; Standing broad-shouldered next to her was a love that was really something, not just the idea of something", "without your past, you could never have arrived- so wondrously and brutally, by design or some violent, exquisite happenstance ...here", "So every day now you brace for the sound you've only heard on TV. You go to class, scared wondering where the best hiding spot would be"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (album == "debut"){
+                    lyricList = ["He said the way my blue eyes shine put those Georgia stars to shame that night", "So go and tell your friends that I'm obsessive and crazy That's fine, I'll tell mine you're gay", "He's the reason for the teardrops on my guitar, the only thing that keeps me wishing on a wishing star", "I'll be strong, I'll be wrong, oh but life goes on", "What a shame, what a rainy ending given to a perfect day", "So I start a fight cause I need to feel something", "I can still see you, this ain't the best view on the outside looking in", "But you don't tell anyone that you might not be the golden one", "I'm taking pictures in my mind so I can save them for a rainy day", "You shouldn't be begging for forgiveness at my feet", "The slamming of doors instead of kissing goodnight", "He's got a one-hand feel on the steering wheel, the other on my heart", "And sometimes we don't say a thing, just listen to the crickets sing", "We could be a beautiful, miracle, unbelievable instead of just invisible", "Why would you wanna make the very first scar"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (album == "fearless") {
+                    lyricList = ["Cause every time you smile, I smile and every time you shine, I'll shine for you", "In the middle of the night when I'm in this dream, it's like a million little stars spelling out your name", "Did I say something way too honest?", "I could go back to every laugh, but I don't wanna go there anymore", "And I knew from the first note played I'd be breaking all my rules to see you", "Me and my stupid pride are sitting here alone going through the photographs, staring at the phone", "You take my hand and drag me head first, fearless", "Laughing at the other girls who think they're so cool, we'll be outta here as soon as we can", "Marry me, Juliet, you'll never have to be alone, I love you, and that's all I really know", "All those other girls, well, they're beautiful, but would they write a song for you?", "I didn't know to be in love you had to fight to have the upper hand", "But she wears short skirts, I wear T-shirts", "Never wanted this, never wanna see you hurt, every little bump in the road I tried to swerve", "You took a swing, I took it hard and here from the ground I see who you are", "You used to shine so bright, but I watched all of it fade", "He can't see the smile I'm faking", "Don't know if Snow White's house is near or far away, but I know I had the best day with you today", "These walls that they put up to hold us back will fall down"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (album == "speaknow") {
+                    lyricList = ["I fell in love with a careless man's careful daughter, she is the best thing that's ever been mine", "Give me something that'll haunt me when you're not around", "It turns out freedom ain't nothing but missing you", "Wearing a gown shaped like a pastry", "Before fire could catch me, so don't look now, I'm shining like fireworks over your sad empty town", "You have pointed out my flaws again, as if I don't already see them", "Since the twist of fate, when it all broke down", "I've never heard silence quite this loud", "I just realized everything I have is someday gonna be gone", "This is me praying that this was the very first page", "But sophistication isn't what you wear or who you know or pushing people down to get you where you wanna go, oh, they didn't teach you that in prep school, so it's up to me", "Wasn't it easier in your lunchbox days? Always a bigger bed to crawl into", "Something keeps me holding onto nothing", "You can plan for a change in weather and time, but I never planned on you changing your mind", "I said, remember this moment, in the back of my mind", "If you have children some day, when they point to the pictures please tell them my name", "Seems like there's always someone who disapproves, they'll judge it like they know about me and you", "People throw rocks at things that shine", "What about the ending?", "To save the world or go to work, it's the same thing to me"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (album == "red") {
+                    lyricList = ["So you were never a saint and I've loved in shades of wrong", "Forgetting him was like trying to know somebody you never met", "And all we are is skin and bone trained to get along", "Now I'm lying on the cold hard ground", "You tell me 'bout your past, thinking your future was me", "And you call me up again just to break me like a promise, so casually cruel in the name of being honest; I'm a crumpled up piece of paper lying here, 'cause I remember it all, all, all too well", "Too many cool kids", "I bet it never, ever occurred to you that I can’t say hello to you and risk another goodbye", "With some indie record that's much cooler than mine", "You took the time to memorize me: my fears, my hopes, and dreams", "You wear your best apology, but I was there to watch you leave", "I guess we fell apart in the usual way, and the story's got dust on every page", "I see your face in every crowd", "Words, how little they mean, when you're a little too late", "And your lover in the foyer doesn’t even know you", "Your eyes look like coming home", "Don't you see the starlight, starlight? Don't you dream impossible things?", "And you don't know how nice that is, but I do", "What do you do when the one who means the most to you is the one who didn't show?", "The delicate beginning rush, the feeling you can know so much without knowing anything at all", "And it would be a fine proposition if I was a stupid girl"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (album == "teen") {
+                    lyricList = ["And you can want who you want, boys and boys and girls and girls", "Cause, darling, I'm a nightmare dressed like a daydream", "You got that James Dean daydream look in your eye and I got that red lip classic thing that you like", "The rest of the world was black and white, but we were in screaming color", "Why'd you have to go and lock me out when I let you in?", "I never miss a beat, I'm lightning on my feet", "We're a crooked love in a straight line down", "If you're coming my way, just don't", "You'll see me in hindsight, tangled up with you all night, burnin' it down", "I want you for worse or for better, I would wait forever and ever", "When you're young, you just run, but you come back to what you need", "Just grab my hand and don't ever drop it, my love", "When the flowers that we'd grown together died of thirst", "Haven't you heard what becomes of curious minds?", "Too in love to think straight", "But there were strangers watching, and whispers turned to talking, and talking turned to screams", "No proof, one touch, but you felt enough", "And for once, you let go of your fears and your ghosts", "And you understand now why they lost their minds and fought the wars, and why I've spent my whole life trying to put it into words", "We play dumb, but we know exactly what we're doing"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (album == "reputation") {
+                    lyricList = ["And he can be my jailer, Burton to this Taylor, every love I've known in comparison is a failure", "After the storm, something was born on the 4th of July", "This is how the world works, you gotta leave before you get left", "I once was poison ivy, but now I'm your daisy", "Handsome, you're a mansion with a view", "But I got smarter, I got harder in the nick of time", "Gold cage, hostage to my feelings", "Ocean blue eyes looking in mine, I feel like I might sink and drown and die", "I'm in a getaway car, I left you in a motel bar; Put the money in a bag and I stole the keys, that was the last time you ever saw me", "Salute to me, I'm your American queen, and you move to me like I'm a Motown beat", "Deep blue, but you painted me golden", "I don't want you like a best friend", "Even in my worst lies, you saw the truth in me", "But you stabbed me in the back while shaking my hand", "I want to wear his initial on a chain 'round my neck, not because he owns me, but 'cause he really knows me", "You don't need to save me, but would you run away with me?", "I want your midnights, but I'll be cleaning up bottles with you on New Year's Day", "I'll be there if you're the toast of the town, babe, or if you strike out and you're crawling home", "Please don't ever become a stranger whose laugh I could recognize anywhere"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (album == "lover") {
+                    lyricList = ["It isn't love, it isn't hate, it's just indifference", "I love you, ain't that the worst thing you ever heard?", "I snuck in through the garden gate every night that summer just to seal my fate", "Have I known you 20 seconds or 20 years?", "If I was out flashing my dollars, I'd be a bitch, not a baller", "I cut off my nose just to spite my face, then I hate my reflection for years and years", "Lyrical smile, indigo eyes, hand on my thigh, we could follow the sparks, I'll drive", "American stories burning before me", "I like shiny things, but I'd marry you with paper rings; Uh huh, that's right, darling, you're the one I want", "I get mystified by how this city screams your name", "I look through the windows of this love even though we boarded them up", "They say home is where the heart is, but God, I love the English", "You like the nicer nurses, you make the best of a bad deal", "Desperate people find faith, so now I pray to Jesus too", "Staring out the window like I’m not your favorite town, I'm New York City", "Hey kids, spelling is fun!", "Chemistry 'til it blows up, 'til there’s no us", "Something gave you the nerve to touch my hand", "I once believed love would be burning red, but it's golden like daylight"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (album == "folklore") {
+                    lyricList = ["If one thing had been different, would everything be different today?", "When you are young, they assume you know nothing", "I had a marvelous time ruining everything", "She stole his dog and dyed it key lime green", "You're not my homeland anymore, so what am I defending now?", "I didn't have it in myself to go with grace, cause when I'd fight, you used to tell me I was brave", "I can change anything about me to fit in", "And they called off the circus, burned the disco down; When they sent home the horses and the rodeo clowns", "Then you won't have to cry or hide in the closet, and just like a folk song our love will be passed on", "For me, it was enough to live for the hope of it all", "I was so ahead of the curve, the curve became a sphere", "You're a flashback in a film reel on the one screen in my town", "And you wanna scream don't call me kid, don't call me baby, look at this godforsaken mess that you made me; you showed me colors you know I can't see with anyone else. Don't call me kid, don't call me baby, look at this idiotic fool that you made me; you taught me a secret language I can't speak with anyone else, and you know damn well for you, I would ruin myself a million little times", "Gave me the blues and then purple-pink skies", "Something med school did not cover, someone's daughter, someone's mother", "Some things you just can't speak about", "Does she smile? Or does she mouth, Fuck you forever?", "Will you kiss me on the porch in front of all your stupid friends?", "The devil's in the details, but you got a friend in me", "You knew it still hurts underneath my scars from when they pulled me apart, but what you did was just as dark", "I want auroras and sad prose, I want to watch wisteria grow right over my bare feet", "A red rose grew up out of ice frozen ground"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (album == "evermore") {
+                    lyricList = ["Show me the places where the others gave you scars", "One for the money, two for the show, I never was ready so I watch you go", "I don't like that falling feels like flying 'til the bone crush", "There's an ache in you, put there by the ache in me", "I made you my temple, my mural, my sky, now I'm begging for footnotes in the story of your life", "Good thing my daddy made me get a boating license when I was fifteen", "You haven't met the new me yet and I think she'll give you that", "Damn, Dorothea, they all wanna be ya, but are you still the same soul I met under the bleachers?", "But when I walked up to the podium, I think that I forgot to say your name", "And the old widow goes to the stone every day, but I don't, I just sit here and wait grieving for the living", "So yeah, it's a war, it's the goddamn fight of my life and you started it, you started it", "And the skeletons in both our closets plotted hard to fuck this up, and the old men that I've swindled really did believe I was the one, and the ladies lunching have their stories about when you passed through town, but that was all before I locked it down", "Past me, I wanna tell you not to get lost in these petty things. Your nemeses, will defeat themselves before you get the chance to swing", "I should've asked you questions, I should've asked you how to be", "I'm fine with my spite, and my tears, and my beers, and my candles", "Writing letters addressed to the fire", "I had a feeling so peculiar this pain wouldn't be for evermore", "I'm sure that you got a wife out there, kids and Christmas, but I'm unaware", "When the words of a sister come back in whispers that prove she was not in fact what she seemed. Not a twin from your dreams, she's a crook who was caught", "That old familiar body ache, the snaps from the same little breaks in your soul"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (album == "other") {
+                    lyricList = ["Your superstitions were the lone survivors of the shipwreck", "If you're anything like me, you never wanted to lock your door, your secret garden gate or your diary drawer", "And no amount of friends at 25 will fill the empty seats at the lunch tables of your past", "She lost him, but found herself, and somehow that was everything", "Said a prayer of gratitude for each chink in the armor she never knew she needed; Standing broad-shouldered next to her was a love that was really something, not just the idea of something", "without your past, you could never have arrived- so wondrously and brutally, by design or some violent, exquisite happenstance ...here", "There will be no further explanation, There will be just reputation", "It would take Brad Pitt to leave you", "And I used to be on your side now it's looking like we're going to battle, and why you're taking shots at me like somebody's gonna give you a medal?", "Wake up and smell the break up, fix my heart, put on my make-up, another mess I didn't plan", "I'm so gangster, you can find me baking cookies at night", "Maybe it's true that I can't live without you, and maybe two is better than one", "You've got a smile that takes me to another planet", "You can change your hair, and you can change your clothes, but you'll always find your way back home", "I've watched from a distance as you made life your own, every sky was your own kind of blue", "Come morning light, you and I'll be safe and sound", "The tricky thing is yesterday we were just children playing soldiers just pretending, dreaming dreams with happy endings in backyards, winning battles with our wooden swords, but now we've stepped into a cruel world where everybody stands and keeps score", "I wish I was strong enough to lift not one but both of us, some day I will be strong enough to lift not one but both of us", "What if I'm standing in your closet trying to talk to you? What if I kept the hand-me-downs you won't grow into? And what if I really thought some miracle would see us through What if the miracle was even getting one moment with you?", "The highway don't care if you're all alone, but I do, I do", "Someday you won't remember this pain you thought would last forever and ever", "Wondering if I dodged a bullet or just lost the love of my life", "And it's strange how your face doesn't look so innocent, your secret has its consequence and that's on you", "All that I wanted was to be wanted", "So every day now you brace for the sound you've only heard on TV. You go to class, scared wondering where the best hiding spot would be", "In my heart is a Christmas tree farm, there's a light in the barn, we run inside out from the cold"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (albumChoice == "special"){
+                    lyricList = ["you're gay", "feet", "watch you sleep", "he owns me", "daddy", "i don't know anything", "confused", "it's miserable", "Who's Taylor Swift, anyway? Ew", "what a shame she's fucked in the head", "this is exhausting", "green eyes", "don't look at me", "code", "I was a stupid girl", "man who makes me sad", "nothing in my brain", "dead"< "Ra-di-di-di-di-di-di-di-di-di-da-da, Ra-di-di-di-di-di-di-di-di-di-da-da, Ra-di-di-di-di-di-di-di-di-di-da-da, Da-da da-da", "1, 2, 3, Let's Go Bitch!", "hostage", "you've ruined my life", "yeugh", "tried to stalk you", "my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my", "piss off your mom", "I just sit", "cat"];
+                    var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
+                    document.getElementById("lyricLine").innerHTML = lyric;
+                }
+            }
+        </script>
+    </body>
+</html>
