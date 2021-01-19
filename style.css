@@ -1,7 +1,7 @@
 body {
     background-image: url(tay.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     text-align: center;
     font-family: 'Karla', sans-serif;
     align-content: center;
@@ -21,4 +21,16 @@ h1 {
 
 #albumValue {
     display: none;
+}
+
+.buttons {
+    background-color: #EBEBEB;
+    color: black;
+    border: 2px solid #5f6896;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.buttons:hover {
+    box-shadow: 1px 3px 5px #6f7075;
 }
