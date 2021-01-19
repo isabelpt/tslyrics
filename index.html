@@ -12,7 +12,8 @@
         <div id="content">
             <h1>ts lyric generator</h1>
             <select id = "album" onchange = "changeAlbum()">
-                <option value="all" selected="selected">favorites</option>
+                <option value="no" selected="selected">---</option>
+                <option value="all">favorites</option>
                 <option value="debut">debut</option>
                 <option value="fearless">fearless</option>
                 <option value="speaknow">speak now</option>
@@ -27,7 +28,7 @@
             </select>
             <button id="abc" onclick = "changeLyric()">change lyric</button>
             <div id="lyricLine">
-                <p></p>
+                <p>Choose a category</p>
             </div>
             <div id="albumValue">
                 <p hidden></p>
@@ -79,6 +80,8 @@
                     document.getElementById("albumValue").innerHTML = "other";
                 } else if (albumChoice == "special") {
                     document.getElementById("albumValue").innerHTML = "special";
+                } else if (albumChoice == "no") {
+                    document.getElementById("albumValue").innerHTML = "no";
                 }
             }
             function changeLyric() {
@@ -128,10 +131,12 @@
                     lyricList = ["Your superstitions were the lone survivors of the shipwreck", "If you're anything like me, you never wanted to lock your door, your secret garden gate or your diary drawer", "And no amount of friends at 25 will fill the empty seats at the lunch tables of your past", "She lost him, but found herself, and somehow that was everything", "Said a prayer of gratitude for each chink in the armor she never knew she needed; Standing broad-shouldered next to her was a love that was really something, not just the idea of something", "without your past, you could never have arrived- so wondrously and brutally, by design or some violent, exquisite happenstance ...here", "There will be no further explanation, There will be just reputation", "It would take Brad Pitt to leave you", "And I used to be on your side now it's looking like we're going to battle, and why you're taking shots at me like somebody's gonna give you a medal?", "Wake up and smell the break up, fix my heart, put on my make-up, another mess I didn't plan", "I'm so gangster, you can find me baking cookies at night", "Maybe it's true that I can't live without you, and maybe two is better than one", "You've got a smile that takes me to another planet", "You can change your hair, and you can change your clothes, but you'll always find your way back home", "I've watched from a distance as you made life your own, every sky was your own kind of blue", "Come morning light, you and I'll be safe and sound", "The tricky thing is yesterday we were just children playing soldiers just pretending, dreaming dreams with happy endings in backyards, winning battles with our wooden swords, but now we've stepped into a cruel world where everybody stands and keeps score", "I wish I was strong enough to lift not one but both of us, some day I will be strong enough to lift not one but both of us", "What if I'm standing in your closet trying to talk to you? What if I kept the hand-me-downs you won't grow into? And what if I really thought some miracle would see us through What if the miracle was even getting one moment with you?", "The highway don't care if you're all alone, but I do, I do", "Someday you won't remember this pain you thought would last forever and ever", "Wondering if I dodged a bullet or just lost the love of my life", "And it's strange how your face doesn't look so innocent, your secret has its consequence and that's on you", "All that I wanted was to be wanted", "So every day now you brace for the sound you've only heard on TV. You go to class, scared wondering where the best hiding spot would be", "In my heart is a Christmas tree farm, there's a light in the barn, we run inside out from the cold"];
                     var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
                     document.getElementById("lyricLine").innerHTML = lyric;
-                } else if (albumChoice == "special"){
+                } else if (album == "special"){
                     lyricList = ["you're gay", "feet", "watch you sleep", "he owns me", "daddy", "i don't know anything", "confused", "it's miserable", "Who's Taylor Swift, anyway? Ew", "what a shame she's fucked in the head", "this is exhausting", "green eyes", "don't look at me", "code", "I was a stupid girl", "man who makes me sad", "nothing in my brain", "dead"< "Ra-di-di-di-di-di-di-di-di-di-da-da, Ra-di-di-di-di-di-di-di-di-di-da-da, Ra-di-di-di-di-di-di-di-di-di-da-da, Da-da da-da", "1, 2, 3, Let's Go Bitch!", "hostage", "you've ruined my life", "yeugh", "tried to stalk you", "my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my, my", "piss off your mom", "I just sit", "cat"];
                     var lyric = lyricList[Math.floor(Math.random() * lyricList.length)];
                     document.getElementById("lyricLine").innerHTML = lyric;
+                } else if (album == "no") {
+                    document.getElementById("lyricLine").innerHTML = "Choose a category"
                 }
             }
         </script>
